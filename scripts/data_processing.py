@@ -66,15 +66,16 @@ def analyze_with_pyspark(spark_df):
 
 if __name__ == "__main__":
     file_path = "./data/sf-fire-calls.csv"
-    spark = SparkSession.builder.appName("FireCallsAnalysis").getOrCreate()
+    # spark = SparkSession.builder.appName("FireCallsAnalysis").getOrCreate()
     
     df_pandas = load_data_pandas(file_path)
     df_processed = process_data(df_pandas)
-    df_spark = spark.createDataFrame(df_processed, schema)
+    # df_spark = spark.createDataFrame(df_processed, schema)
     
-    analyze_with_pyspark(df_spark)
-    print(df_processed.head())
+    # analyze_with_pyspark(df_spark)
+    # print(df_processed.head())
 
+    print(df_processed.head())
 
 
    
